@@ -1,0 +1,4 @@
+FROM mysql:8.0.23 as mysql
+COPY ./scriptMKT ./scriptMKT
+ENV  MYSQL_ROOT_PASSWORD=MKtorn044752
+EXPOSE 3306

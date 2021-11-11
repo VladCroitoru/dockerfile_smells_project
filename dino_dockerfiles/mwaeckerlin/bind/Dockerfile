@@ -1,0 +1,22 @@
+FROM mwaeckerlin/base
+MAINTAINER mwaeckerlin
+
+EXPOSE 53/udp
+
+ENV TTL "3600"
+ENV SERIAL ""
+ENV REFRESH "3600"
+ENV RETRY "1800"
+ENV EXPIRE "604800"
+ENV NEGATIVE_CACHE_TTL "1800"
+ENV DEFAULT_IP ""
+ENV DEFAULT_SUBDOMAINS "www"
+ENV DEFAULT_DOMAINS ""
+ENV TRANSFER ""
+ENV SEVERITY "warning"
+
+ENV CONTAINERNAME "bind"
+
+RUN $PKG_INSTALL bind bind-tools \
+ && $ALLOW_USER /etc/bind /var/bind
+ADD start.sh /start.sh

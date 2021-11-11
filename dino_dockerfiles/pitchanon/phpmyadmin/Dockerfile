@@ -1,0 +1,11 @@
+FROM phpmyadmin/phpmyadmin
+
+MAINTAINER Pitchanon D <Pitchanon.d@gmail.com>
+
+EXPOSE 8080
+
+#ENV PMA_ARBITRARY 1
+#ENV PMA_HOST 192.168.99.100
+#ENV PMA_PORT 33991
+#ENV PMA_USER root
+#ENV PMA_PASSWORD 123456

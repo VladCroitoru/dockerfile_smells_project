@@ -1,0 +1,32 @@
+FROM node:15.3.0 as builder
+RUN apt-get -y update && apt-get -y install curl gzip tar unzip
+ARG HELM_DOWNLOAD_URL="https://get.helm.sh/helm-v3.4.1-linux-amd64.tar.gz"
+RUN curl -s -j -k -L "${HELM_DOWNLOAD_URL}" > /tmp/helm.tar.gz
+RUN echo "538f85b4b73ac6160b30fd0ab4b510441aa3fa326593466e8bf7084a9c288420  /tmp/helm.tar.gz" | sha256sum -c
+RUN mkdir -p /data
+WORKDIR /data
+RUN gunzip -c "/tmp/helm.tar.gz" | tar -xf - \
+&& mv "/data/linux-amd64/helm" "/data/helm" \
+&& rm -f "/tmp/helm.tar.gz" \
+&& rm -rf "/tmp/linux-amd64"
+COPY . /src
+WORKDIR /src
+RUN npm -s install && npm -s run build && npm -s test && npm -s pack && mv cathive-concourse-chartmuseum-resource-*.tgz /data/cathive-concourse-chartmuseum-resource.tgz
+
+FROM node:15.3.0-alpine3.12
+RUN apk add --no-cache gnupg ca-certificates
+COPY --from=builder "/data/helm" "/usr/local/bin/helm"
+COPY --from=builder "/data/cathive-concourse-chartmuseum-resource.tgz" "/tmp/cathive-concourse-chartmuseum-resource.tgz"
+RUN npm -s install -g /tmp/cathive-concourse-chartmuseum-resource.tgz \
+&& rm -f /tmp/cathive-concourse-chartmuseum-resource.tgz \
+&& mkdir -p /opt/resource \
+&& ln -sf /usr/local/bin/concourse-chartmuseum-resource-check /opt/resource/check \
+&& ln -sf /usr/local/bin/concourse-chartmuseum-resource-in /opt/resource/in \
+&& ln -sf /usr/local/bin/concourse-chartmuseum-resource-out /opt/resource/out
+ENV PATH="/usr/local/bin:/usr/bin:/bin"
+LABEL maintainer="Benjamin P. Jung <headcr4sh@gmail.com>" \
+      version="1.0.0" \
+      org.concourse-ci.target-version="6.7.2" \
+      org.concourse-ci.resource-id="chartmuseum" \
+      org.concourse-ci.resource-name="ChartMuseum package management" \
+      org.concourse-ci.resource-homepage="https://github.com/cathive/concourse-chartmuseum-resource"

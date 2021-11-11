@@ -1,0 +1,10 @@
+# ARG NODE_MAJOR=12
+
+FROM ruby:2.7-apline
+
+WORKDIR /app
+
+COPY . /app/
+
+EXPOSE 3000 80 8080
+ 

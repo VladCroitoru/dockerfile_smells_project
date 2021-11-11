@@ -1,0 +1,6 @@
+ARG DOCKER_REGISTRY=docker.io
+ARG DOCKER_IMG_TAG=":2020-04-13.1"
+ARG DOCKER_IMG_HASH=""
+FROM ${DOCKER_REGISTRY}/qnib/alplain-init${DOCKER_IMG_TAG}${DOCKER_IMG_HASH}
+
+RUN apk --no-cache add openjdk8-jre

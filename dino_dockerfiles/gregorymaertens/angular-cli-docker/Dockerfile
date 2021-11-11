@@ -1,0 +1,18 @@
+FROM node:6.6
+
+# prepare a user which runs everything locally! - required in child images!
+RUN useradd --user-group --create-home --shell /bin/false app
+
+# install python-dev and pip
+RUN apt-get update && apt-get install -y --no-install-recommends python-setuptools python-dev build-essential
+RUN easy_install pip 
+
+#install aws cli
+RUN pip install awscli
+
+ENV HOME=/home/app
+WORKDIR $HOME
+
+RUN npm install -g angular-cli@1.0.0-beta.21 && npm cache clean
+
+EXPOSE 4200

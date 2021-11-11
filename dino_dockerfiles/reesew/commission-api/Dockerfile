@@ -1,0 +1,1 @@
+FROM shinymayhem/node:onbuild

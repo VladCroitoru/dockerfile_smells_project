@@ -1,0 +1,21 @@
+FROM python:3.9.7
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+ENV SECRET_KEY={SECRET_KEY} \
+    ENVT={ENVT} \
+    DB_NAME={DB_NAME} \
+    DB_USER={DB_USER} \
+    DB_PASSWORD={DB_PASSWORD} \
+    EMAIL_HOST_USER={EMAIL_HOST_USER} \
+    EMAIL_HOST_PASSWORD={EMAIL_HOST_PASSWORD} \
+    BRANCH_NAME={BRANCH_NAME}
+
+WORKDIR /app
+
+COPY . .
+
+RUN python3 -m pip install -r requirements.txt
+
+CMD [ "/bin/sh", "docker-entrypoint.sh" ]

@@ -1,0 +1,28 @@
+FROM ubuntu:14.04
+
+WORKDIR /usr/src/app
+
+RUN apt-get update && \
+    apt-get install -y \
+        ruby \
+        bundler \
+        git \
+        libxml2-dev \
+        libxslt-dev \
+        curl \
+        && \
+    curl https://deb.nodesource.com/setup_0.10 | bash - && \
+    apt-get install -y nodejs && apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+
+COPY Gemfile /usr/src/app
+COPY Gemfile.lock /usr/src/app
+
+RUN bundle install
+
+COPY package.json /usr/src/app
+
+RUN npm install
+
+COPY . /usr/src/app

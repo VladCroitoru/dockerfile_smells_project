@@ -1,0 +1,22 @@
+FROM debian:latest
+
+LABEL maintainer="docker@irespaldiza.com" 
+LABEL version: "1.0"
+
+RUN  apt-get update && apt install --no-install-recommends -y -qq \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     gnupg2 \
+     software-properties-common
+
+RUN curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | apt-key add -
+
+RUN add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
+   $(lsb_release -cs) \
+   stable"
+
+RUN apt update && apt install -y -qq docker-ce && \
+    rm -rf /var/lib/apt/lists/*
+

@@ -1,0 +1,8 @@
+FROM navikt/java:15-appdynamics
+COPY target/*.jar app.jar
+ENV APPD_ENABLED=true
+ENV APP_NAME=fpinfo-historikk
+ENV APPDYNAMICS_CONTROLLER_HOST_NAME=appdynamics.adeo.no
+ENV APPDYNAMICS_CONTROLLER_PORT=443
+ENV APPDYNAMICS_CONTROLLER_SSL_ENABLED=true
+ENV JAVA_OPTS --enable-preview

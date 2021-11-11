@@ -1,0 +1,1 @@
+FROM wyrihaximusgithubactions/supported-php-versions:master

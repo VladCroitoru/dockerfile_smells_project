@@ -1,0 +1,13 @@
+FROM node:16.10
+
+RUN mkdir -p /opt/camo/
+WORKDIR /opt/camo/
+
+ADD package.json /opt/camo/
+ADD server.js /opt/camo/
+ADD mime-types.json /opt/camo/
+
+EXPOSE 8081
+
+RUN npm install
+CMD ["npm", "start"]

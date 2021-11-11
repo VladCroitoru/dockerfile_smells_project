@@ -1,0 +1,6 @@
+FROM golang:1.6
+ADD . /go/src/github.com/kazokuco/disco
+WORKDIR /go/src/github.com/kazokuco/disco
+RUN go get ./...
+RUN go install ./...
+ENTRYPOINT ["/go/bin/disco"]

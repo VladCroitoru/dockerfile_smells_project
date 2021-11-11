@@ -1,0 +1,8 @@
+FROM salesforce/salesforcedx:latest
+RUN echo 'y' | sfdx plugins:install sfdx-source-scanner
+ENV SFDX_CODE_COVERAGE_REQUIREMENT=80
+ENV SFDX_AUTOUPDATE_DISABLE=true
+ENV SFDX_DISABLE_TELEMETRY=true
+ENV SFDX_IMPROVED_CODE_COVERAGE=true
+ENV SFDX_JSON_TO_STDOUT=true
+ENV SFDX_USE_PROGRESS_BAR=false
