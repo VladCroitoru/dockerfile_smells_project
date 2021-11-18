@@ -1,0 +1,1 @@
+[{"line":8,"code":"SC2144","message":"-e doesn't work with globs. Use a for loop.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//fcrepo-exts/fcrepo-camel-toolbox/Dockerfile","level":"error"}]

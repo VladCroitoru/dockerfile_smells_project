@@ -1,0 +1,1 @@
+[{"line":5,"code":"SC2239","message":"Ensure the shebang uses an absolute path to the interpreter.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//jobscale/node-express-ejs-authorization/Dockerfile","level":"error"}]

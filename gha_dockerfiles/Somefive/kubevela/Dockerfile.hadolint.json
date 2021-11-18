@@ -1,0 +1,1 @@
+[{"line":36,"code":"DL1000","message":"unexpected ':'\nexpecting '@', '\\', a new line followed by the next instruction, or the image tag","column":26,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//Somefive/kubevela/Dockerfile","level":"error"}]

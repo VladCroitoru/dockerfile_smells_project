@@ -1,0 +1,1 @@
+[{"line":15,"code":"DL1000","message":"unexpected ']'\nexpecting '\\', a new line followed by the next instruction, or at least one space","column":88,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//cicorias/opentelemetry-span-empty-issue-1892/Dockerfile","level":"error"}]

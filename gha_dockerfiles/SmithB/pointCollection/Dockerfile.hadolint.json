@@ -1,0 +1,1 @@
+[{"line":242,"code":"DL1000","message":"unexpected \"type=bind \\<newline>\"\nexpecting \"from=\", \"readonly\", \"readwrite\", \"ro\", \"rw\", source=, or target=","column":37,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//SmithB/pointCollection/Dockerfile","level":"error"}]

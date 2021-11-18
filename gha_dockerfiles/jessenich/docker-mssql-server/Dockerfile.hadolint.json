@@ -1,0 +1,1 @@
+[{"line":82,"code":"DL1000","message":"unexpected '\\'\nexpecting \"<<\", '\\', at least one space, or literal character","column":48,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//jessenich/docker-mssql-server/Dockerfile","level":"error"}]

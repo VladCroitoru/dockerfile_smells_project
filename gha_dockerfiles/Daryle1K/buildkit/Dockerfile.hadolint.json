@@ -1,0 +1,1 @@
+[{"line":70,"code":"DL1000","message":"unexpected \"type=cache \\\"\nexpecting \"from=\", \"readonly\", \"readwrite\", \"ro\", \"rw\", source=, or target=","column":82,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//Daryle1K/buildkit/Dockerfile","level":"error"}]

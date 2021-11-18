@@ -1,0 +1,1 @@
+[{"line":5,"code":"DL1000","message":"unexpected '$'\nexpecting '\\', a new line followed by the next instruction, or the variable name","column":23,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//rebecca-warren/vuln-graphql-api/Dockerfile","level":"error"}]

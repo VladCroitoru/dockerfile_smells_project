@@ -1,0 +1,1 @@
+[{"line":10,"code":"DL3028","message":"Pin versions in gem install. Instead of `gem install <gem>` use `gem install <gem>:<version>`","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//donghhan/apensia-gitbook-blog/Dockerfile","level":"warning"}]

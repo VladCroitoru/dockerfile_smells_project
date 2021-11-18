@@ -1,0 +1,1 @@
+[{"line":7,"code":"DL1000","message":"unexpected ':'\nexpecting '@', '\\', a new line followed by the next instruction, or the image tag","column":95,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//olegabu/fabric-starter-rest/Dockerfile","level":"error"}]

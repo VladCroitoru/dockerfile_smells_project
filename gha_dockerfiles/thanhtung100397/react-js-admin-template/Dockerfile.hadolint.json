@@ -1,0 +1,1 @@
+[{"line":8,"code":"SC2039","message":"In POSIX sh, [[ ]] is undefined.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//thanhtung100397/react-js-admin-template/Dockerfile","level":"warning"}]

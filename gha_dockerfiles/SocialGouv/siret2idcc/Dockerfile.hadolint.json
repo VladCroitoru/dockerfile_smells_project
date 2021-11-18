@@ -1,0 +1,1 @@
+[{"line":12,"code":"DL3060","message":"`yarn cache clean` missing after `yarn install` was run.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//SocialGouv/siret2idcc/Dockerfile","level":"info"}]

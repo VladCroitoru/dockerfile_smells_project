@@ -1,0 +1,1 @@
+[{"line":5,"code":"SC2115","message":"Use \"${var:?}\" to ensure this never expands to /usr/share/* .","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//integritee-network/integritee-node/Dockerfile","level":"warning"}]

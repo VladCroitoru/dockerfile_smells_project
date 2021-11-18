@@ -1,0 +1,1 @@
+[{"line":1,"code":"DL3007","message":"Using latest is prone to errors if the image will ever update. Pin the version explicitly to a release tag","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/gha_dockerfiles//szymonmaszke/CV/Dockerfile","level":"warning"}]
