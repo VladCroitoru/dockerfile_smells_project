@@ -1,0 +1,1 @@
+[{"line":10,"code":"DL3020","message":"Use COPY instead of ADD for files and folders","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//okisanjp/docker-mysql57-utf8mb4/Dockerfile","level":"error"}]

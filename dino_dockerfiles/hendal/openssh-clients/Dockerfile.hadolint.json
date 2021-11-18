@@ -1,0 +1,1 @@
+[{"line":3,"code":"SC2039","message":"In POSIX sh, echo flags are undefined.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//hendal/openssh-clients/Dockerfile","level":"warning"}]

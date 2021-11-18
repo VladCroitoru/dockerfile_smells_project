@@ -1,0 +1,1 @@
+[{"line":28,"code":"SC2039","message":"In POSIX sh, ulimit -n is undefined.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//onfido/fluentd-es-aws/Dockerfile","level":"warning"}]

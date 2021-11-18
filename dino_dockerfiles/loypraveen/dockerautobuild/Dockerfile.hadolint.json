@@ -1,0 +1,1 @@
+[{"line":2,"code":"DL3045","message":"`COPY` to a relative destination without `WORKDIR` set.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//loypraveen/dockerautobuild/Dockerfile","level":"warning"}]

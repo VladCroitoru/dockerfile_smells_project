@@ -1,0 +1,1 @@
+[{"line":3,"code":"DL3018","message":"Pin versions in apk add. Instead of `apk add <package>` use `apk add <package>=<version>`","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//targetprocess/docker-node-alpine-build/Dockerfile","level":"warning"}]

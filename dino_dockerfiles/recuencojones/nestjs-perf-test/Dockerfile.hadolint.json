@@ -1,0 +1,1 @@
+[{"line":7,"code":"SC2035","message":"Use ./*glob* or -- *glob* so names with dashes won't become options.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//recuencojones/nestjs-perf-test/Dockerfile","level":"info"}]

@@ -1,0 +1,1 @@
+[{"line":4,"code":"SC2028","message":"echo may not expand escape sequences. Use printf.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//tolleiv/fw-migration/Dockerfile","level":"info"}]

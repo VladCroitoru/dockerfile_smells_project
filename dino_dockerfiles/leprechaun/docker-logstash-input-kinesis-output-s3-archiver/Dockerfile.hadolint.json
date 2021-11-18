@@ -1,0 +1,1 @@
+[{"line":4,"code":"DL3059","message":"Multiple consecutive `RUN` instructions. Consider consolidation.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//leprechaun/docker-logstash-input-kinesis-output-s3-archiver/Dockerfile","level":"info"}]

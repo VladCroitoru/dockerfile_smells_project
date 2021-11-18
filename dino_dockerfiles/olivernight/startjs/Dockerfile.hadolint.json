@@ -1,0 +1,1 @@
+[{"line":13,"code":"DL4003","message":"Multiple `CMD` instructions found. If you list more than one `CMD` then only the last `CMD` will take effect","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//olivernight/startjs/Dockerfile","level":"warning"}]

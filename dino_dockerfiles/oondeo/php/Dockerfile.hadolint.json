@@ -1,0 +1,1 @@
+[{"line":1,"code":"DL1000","message":"unexpected 'D'\nexpecting '#', ADD, ARG, CMD, COPY, ENTRYPOINT, ENV, EXPOSE, FROM, HEALTHCHECK, LABEL, MAINTAINER, ONBUILD, RUN, SHELL, STOPSIGNAL, USER, VOLUME, WORKDIR, a pragma, end of input, or whitespaces","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//oondeo/php/Dockerfile","level":"error"}]

@@ -1,0 +1,1 @@
+[{"line":5,"code":"SC1007","message":"Remove space after = if trying to assign a value (for empty string, use var='' ... ).","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//clemenstyp/helper/Dockerfile","level":"warning"}]

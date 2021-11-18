@@ -1,0 +1,1 @@
+[{"line":13,"code":"DL3046","message":"`useradd` without flag `-l` and high UID will result in excessively large Image.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//lorgor/vulnmine/Dockerfile","level":"warning"}]

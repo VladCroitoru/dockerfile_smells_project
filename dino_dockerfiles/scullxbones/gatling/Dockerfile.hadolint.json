@@ -1,0 +1,1 @@
+[{"line":12,"code":"DL3003","message":"Use WORKDIR to switch to a directory","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//scullxbones/gatling/Dockerfile","level":"warning"},{"line":20,"code":"DL3000","message":"Use absolute WORKDIR","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//scullxbones/gatling/Dockerfile","level":"error"}]

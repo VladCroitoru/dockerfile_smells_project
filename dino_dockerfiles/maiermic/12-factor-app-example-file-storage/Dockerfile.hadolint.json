@@ -1,0 +1,1 @@
+[{"line":4,"code":"DL3060","message":"`yarn cache clean` missing after `yarn install` was run.","column":1,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//maiermic/12-factor-app-example-file-storage/Dockerfile","level":"info"}]

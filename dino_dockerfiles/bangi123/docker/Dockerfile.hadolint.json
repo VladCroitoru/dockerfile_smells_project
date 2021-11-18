@@ -1,0 +1,1 @@
+[{"line":4,"code":"DL1000","message":"unexpected \": ADD . /my\"\nexpecting '#', '\\', ADD, ARG, CMD, COPY, ENTRYPOINT, ENV, EXPOSE, FROM, HEALTHCHECK, LABEL, MAINTAINER, ONBUILD, RUN, SHELL, STOPSIGNAL, USER, VOLUME, WORKDIR, a pragma, or at least one space","column":9,"file":"/Users/vlad/Dev/itu/sem3/res_proj/dino_dockerfiles//bangi123/docker/Dockerfile","level":"error"}]
