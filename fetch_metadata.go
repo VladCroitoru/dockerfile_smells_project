@@ -193,24 +193,21 @@ func main() {
 	reposFile := os.Args[1]
 	outputPath := os.Args[2]
 	tokens := readTokens(".gh_tokens")
-	visited := getVisited(outputPath + "_visited")
-	fmt.Println(fmt.Sprintf("visited %d", len(visited)))
 	repos := readRepos(reposFile)
-	fmt.Println(fmt.Sprintf("repos %d", len(repos)))
+	visited := getVisited(outputPath + "_visited")
   toVisit := filter(repos, visited)
+	fmt.Println(fmt.Sprintf("repos %d", len(repos)))
+	fmt.Println(fmt.Sprintf("visited %d", len(visited)))
 	fmt.Println(fmt.Sprintf("toVisit %d", len(toVisit)))
-	fmt.Println(toVisit)
 
 	offset := 0
 	var wg sync.WaitGroup
-	fmt.Println("iterating tokens")
 	for _, token := range tokens {
 		remaining := getRateLimit(token)
 		if remaining > 0 {
 			repos := slice(toVisit, remaining, offset)
 			offset += len(repos)
 			
-			fmt.Println("launching goroutine")
 			wg.Add(1)
 			go func ()  {
 				fetchMetadata(repos, token, outputPath)
