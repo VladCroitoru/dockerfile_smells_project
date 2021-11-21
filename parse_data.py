@@ -76,7 +76,7 @@ def parse_to_csv(paths: list[str]) -> list[str]:
     repo_data = get_repodata(path)
     contributors = get_contributors(path)
     for smell in smells:
-      row = f"{name},{smell['type']},{smell['code']},{smell['level']},{year},{repo_data['owner_type']},{repo_data['language']},{repo_data['size']},{contributors}"
+      row = f"{name},{smell['code']},{smell['type']},{smell['level']},{year},{repo_data['owner_type']},{repo_data['language']},{repo_data['size']},{contributors}"
       rows.append(row)
   return rows
 
