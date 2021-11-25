@@ -45,7 +45,7 @@ def get_year(path: str) -> str:
   if len(last_commit) == 0:
     return ""
   else:
-    return last_commit[0]['commit']['author']['date'][:4]
+    return last_commit[0]['commit']['committer']['date'][:4]
 
 def get_smells(path: str) -> list:
   file_path = f"{path}.hadolint.json"
@@ -59,7 +59,8 @@ def get_smells(path: str) -> list:
     temp['code'] = smell['code']
     temp['level'] = smell['level']
     temp['type'] = smell['code'][:2]
-    smells.append(temp)
+    if temp['level'] in ['error', 'warning']:
+      smells.append(temp)
 
   return smells
 
