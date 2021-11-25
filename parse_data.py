@@ -59,8 +59,8 @@ def get_smells(path: str) -> list:
     temp['code'] = smell['code']
     temp['level'] = smell['level']
     temp['type'] = smell['code'][:2]
-    if temp['level'] in ['error', 'warning']:
-      smells.append(temp)
+    # if temp['level'] in ['error', 'warning']:
+    smells.append(temp)
 
   return smells
 
