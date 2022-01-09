@@ -1,3 +1,4 @@
+from os import error
 import sys
 import json
 import os.path
@@ -68,16 +69,34 @@ def get_name(path: str) -> str:
   author_repo = path.split('/')[2:4]
   return '/'.join(author_repo)
 
+def get_loc(path: str) -> int:
+  count = 0
+  with open(path, encoding="latin1") as f:
+    try:
+      for line in f.readlines():
+        line = line.strip()
+        if line != '' and not line.startswith('#'):
+          count += 1
+    except error:
+      pass
+  return count
+
+def get_size(path: str) -> int:
+    st = os.stat(path)
+    return st.st_size
+
 def parse_to_csv(paths: list[str]) -> list[str]:
   rows = []
   for path in paths:
     name = get_name(path)
+    file_size = get_size(path)
+    loc = get_loc(path)
     smells = get_smells(path)
     year = get_year(path)
     repo_data = get_repodata(path)
     contributors = get_contributors(path)
     for smell in smells:
-      row = f"{name},{smell['code']},{smell['type']},{smell['level']},{year},{repo_data['owner_type']},{repo_data['language']},{repo_data['size']},{contributors}"
+      row = f"{name},{smell['code']},{smell['type']},{smell['level']},{year},{file_size},{loc},{repo_data['owner_type']},{repo_data['language']},{repo_data['size']},{contributors}"
       rows.append(row)
   return rows
 
@@ -89,7 +108,7 @@ def main():
   # in the following format: /path/to/dockerfile/dir/
   paths = read_input()
   rows = parse_to_csv(paths)
-  print('repo_name,smell_code,type,level,year,owner_type,language,size,contributors')
+  print('repo_name,smell_code,type,level,year,file_size,loc,owner_type,language,size,contributors')
   print('\n'.join(rows))
 
 if __name__ == '__main__':
